@@ -1,0 +1,13 @@
+/* Vow Buddy: fonts and colours for the parts of the theme we don't draw ourselves (header, footer, product pages). */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap');
+:root { --font-body--family: Figtree, system-ui, sans-serif !important; --font-heading--family: Fraunces, Georgia, serif !important; --font-subheading--family: Figtree, system-ui, sans-serif !important; --font-accent--family: Fraunces, Georgia, serif !important; }
+body { font-family: Figtree, system-ui, sans-serif; background: #f6f3ec; color: #1c211e; }
+h1, h2, h3, .h1, .h2, .h3 { font-family: Fraunces, Georgia, serif; font-weight: 500; letter-spacing: -0.3px; }
+#header-group .header__row--top, .header-section, #header-component { background: #f6f3ec; }
+#header-component a, #header-component .menu__link { font-family: Figtree, system-ui, sans-serif; font-weight: 500; }
+#header-component .header__logo, #header-component .header__heading-link, #header-component .header__heading { font-family: Fraunces, Georgia, serif !important; font-weight: 600 !important; font-size: 22px !important; letter-spacing: -0.2px; }
+footer, .footer, .footer-utilities { background: #f6f3ec; color: #4f5753; }
+footer a { color: #4f5753; }
+.button, button.button, .button--primary { border-radius: 999px !important; font-family: Figtree, system-ui, sans-serif; font-weight: 600; }
+.button--primary, .button:not(.button--secondary) { background: #173b31 !important; color: #f3efe6 !important; border-color: #173b31 !important; }
+.product-title, .product__title { font-family: Fraunces, Georgia, serif; font-weight: 500; }

@@ -1,0 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "vb_landing": {
+      "type": "vb-landing",
+      "settings": {
+        "pill": "Seating plans, sorted",
+        "heading": "Seat 140 guests without the headache.",
+        "lead": "Drag your guests onto tables, tell Vow Buddy who can't sit together, and press one button. It does the fiddly bit. You get a seating chart the venue can use and place cards you can print.",
+        "cta_label": "Start your plan, free",
+        "cta_link": "https://plan.vowbuddy.com/"
+      }
+    }
+  },
+  "order": [
+    "vb_landing"
+  ]
+}

@@ -1,0 +1,104 @@
+{%- comment -%} Vow Buddy landing section {%- endcomment -%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+.vb{font-family:Figtree,system-ui,sans-serif;background:#f6f3ec;color:#1c211e;line-height:1.45}
+.vb *{box-sizing:border-box}
+.vb a{color:inherit;text-decoration:none}
+.vb-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.vb-hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:64px 0 40px}
+.vb-hero-copy{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.vb-pill{display:inline-flex;align-self:flex-start;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:18px;color:#b9975b}
+.vb h1{margin:0;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(40px,5.2vw,62px);line-height:1.02;letter-spacing:-0.6px}
+.vb-lead{margin:0;font-size:18px;line-height:1.55;color:#4f5753;max-width:520px}
+.vb-btns{display:flex;gap:12px;flex-wrap:wrap}
+.vb-btn{height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;display:inline-flex;align-items:center}
+.vb .vb-btn-primary,.vb .vb-btn-primary:visited,.vb .vb-btn-primary:hover{background:#173b31;color:#f3efe6;text-decoration:none}
+.vb .vb-btn-ghost,.vb .vb-btn-ghost:visited,.vb .vb-btn-ghost:hover{border:1px solid #d2cbbb;background:#fffdf9;color:#1c211e;text-decoration:none}
+.vb-small{font-size:13px;color:#7a827c}
+.vb-preview{flex:1 1 460px;min-width:0;position:relative;height:420px;border-radius:22px;background:#fffdf9;border:1px solid #e2dccf;box-shadow:0 30px 60px -30px rgba(23,59,49,.35);overflow:hidden}
+.vb-preview-bar{position:absolute;left:0;right:0;top:0;height:44px;border-bottom:1px solid #ECEAE3;display:flex;align-items:center;padding:0 16px;gap:8px}
+.vb-dot{width:10px;height:10px;border-radius:50%;background:#E0DED6;display:inline-block}
+.vb-sort{margin-left:auto;height:28px;padding:0 12px;border-radius:999px;background:#173b31;color:#f3efe6;font-size:11px;font-weight:600;display:flex;align-items:center}
+.vb-grid{position:absolute;inset:44px 0 0 0;background:#fffdf9 radial-gradient(#ddd6c7 1px,transparent 1.2px) 0 0/24px 24px}
+.vb-table{position:absolute;width:120px;height:120px}
+.vb-table-c{position:absolute;inset:20px;border-radius:50%;background:#fffdf9;border:1.5px solid #1c211e;box-shadow:inset 0 0 0 4px #fffdf9,inset 0 0 0 5px #cfc6b3;display:flex;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-size:13px;font-weight:500}
+.vb-seat{position:absolute;width:20px;height:20px;border-radius:50%}
+.vb-g{background:#2f6b57}.vb-r{background:#6e3b63}
+.vb-s1{left:50px;top:0}.vb-s2{left:86px;top:14px}.vb-s3{left:100px;top:50px}.vb-s4{left:86px;top:86px}.vb-s5{left:50px;top:100px}.vb-s6{left:14px;top:86px}.vb-s7{left:0;top:50px}.vb-s8{left:14px;top:14px}
+.vb-toast{position:absolute;right:20px;bottom:20px;padding:10px 14px;border-radius:999px;background:#173b31;color:#f3efe6;font-size:12px;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.vb h2{margin:0;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:34px;letter-spacing:-.3px}
+.vb-steps{padding:32px 0 56px;display:flex;flex-direction:column;gap:24px}
+.vb-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media(max-width:800px){.vb-3{grid-template-columns:1fr}}
+.vb-card{padding:26px;border-radius:18px;background:#fffdf9;border:1px solid #e2dccf;display:flex;flex-direction:column;gap:10px}
+.vb-num{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:30px;color:#b9975b;line-height:1}
+.vb h3{margin:0;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:22px}
+.vb-card p{margin:0;font-size:15px;line-height:1.55;color:#4f5753}
+.vb-pricing{padding:0 0 64px;display:flex;flex-wrap:wrap;gap:24px}
+.vb-price{flex:1 1 300px;padding:28px;border-radius:18px;background:#fffdf9;border:1px solid #e2dccf;display:flex;flex-direction:column;gap:12px}
+.vb-price-dark{background:#173b31;color:#f3efe6;border-color:#173b31}
+.vb-label{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:18px;color:#7a827c}
+.vb-price-dark .vb-label{color:#b9975b}
+.vb-amount{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:40px;letter-spacing:-.5px}
+.vb-amount span{font-family:Figtree,sans-serif;font-size:14px;font-weight:500;color:#7a827c}
+.vb-price-dark .vb-amount span{color:#a9bfb3}
+.vb-price ul{margin:0;padding-left:18px;font-size:14.5px;line-height:1.7;color:#4f5753}
+.vb-price-dark ul{color:#d9e2dc}
+.vb-price .vb-btn{height:44px;font-size:14px;margin-top:auto;justify-content:center}
+.vb .vb-price-dark .vb-btn,.vb .vb-price-dark .vb-btn:visited,.vb .vb-price-dark .vb-btn:hover{background:#f3efe6;color:#173b31;text-decoration:none}
+</style>
+<div class="vb">
+  <div class="vb-wrap">
+    <section class="vb-hero">
+      <div class="vb-hero-copy">
+        <span class="vb-pill">{{ section.settings.pill }}</span>
+        <h1>{{ section.settings.heading }}</h1>
+        <p class="vb-lead">{{ section.settings.lead }}</p>
+        <div class="vb-btns">
+          <a class="vb-btn vb-btn-primary" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+          <a class="vb-btn vb-btn-ghost" href="#vb-how">Watch it sort a plan</a>
+        </div>
+        <div class="vb-small">Free to build. Pay once when you print. No card needed to start.</div>
+      </div>
+      <div class="vb-preview" aria-hidden="true">
+        <div class="vb-preview-bar"><span class="vb-dot"></span><span class="vb-dot"></span><span class="vb-dot"></span><span class="vb-sort">Sort it for me</span></div>
+        <div class="vb-grid"></div>
+        <div class="vb-table" style="left:36px;top:80px"><div class="vb-table-c">Table 1</div><span class="vb-seat vb-g vb-s1"></span><span class="vb-seat vb-g vb-s2"></span><span class="vb-seat vb-g vb-s3"></span><span class="vb-seat vb-g vb-s4"></span><span class="vb-seat vb-g vb-s5"></span><span class="vb-seat vb-g vb-s6"></span><span class="vb-seat vb-g vb-s7"></span><span class="vb-seat vb-g vb-s8"></span></div>
+        <div class="vb-table" style="left:190px;top:80px"><div class="vb-table-c">Table 2</div><span class="vb-seat vb-r vb-s1"></span><span class="vb-seat vb-r vb-s2"></span><span class="vb-seat vb-r vb-s3"></span><span class="vb-seat vb-g vb-s4"></span><span class="vb-seat vb-g vb-s5"></span><span class="vb-seat vb-r vb-s6"></span><span class="vb-seat vb-r vb-s7"></span><span class="vb-seat vb-r vb-s8"></span></div>
+        <div class="vb-table" style="left:344px;top:80px"><div class="vb-table-c">Table 3</div><span class="vb-seat vb-g vb-s1"></span><span class="vb-seat vb-r vb-s2"></span><span class="vb-seat vb-g vb-s3"></span><span class="vb-seat vb-r vb-s4"></span><span class="vb-seat vb-g vb-s5"></span><span class="vb-seat vb-r vb-s6"></span><span class="vb-seat vb-g vb-s7"></span><span class="vb-seat vb-r vb-s8"></span></div>
+        <div class="vb-table" style="left:112px;top:236px"><div class="vb-table-c">Table 4</div><span class="vb-seat vb-g vb-s1"></span><span class="vb-seat vb-g vb-s2"></span><span class="vb-seat vb-g vb-s3"></span><span class="vb-seat vb-g vb-s4"></span><span class="vb-seat vb-g vb-s5"></span><span class="vb-seat vb-g vb-s6"></span><span class="vb-seat vb-g vb-s7"></span><span class="vb-seat vb-g vb-s8"></span></div>
+        <div class="vb-table" style="left:268px;top:236px"><div class="vb-table-c">Table 5</div><span class="vb-seat vb-r vb-s1"></span><span class="vb-seat vb-r vb-s2"></span><span class="vb-seat vb-r vb-s3"></span><span class="vb-seat vb-r vb-s4"></span><span class="vb-seat vb-r vb-s5"></span><span class="vb-seat vb-r vb-s6"></span><span class="vb-seat vb-r vb-s7"></span><span class="vb-seat vb-r vb-s8"></span></div>
+        <div class="vb-toast">12 of 12 rules kept, no clashes</div>
+      </div>
+    </section>
+
+    <section class="vb-steps" id="vb-how">
+      <h2>Three steps, one evening.</h2>
+      <div class="vb-3">
+        <div class="vb-card"><span class="vb-num">1</span><h3>Add your guests</h3><p>Type them, paste them, or upload your spreadsheet. Tag who's with who, and who really isn't.</p></div>
+        <div class="vb-card"><span class="vb-num">2</span><h3>Build the room</h3><p>Round tables, long tables, a dance floor. Drag guests on, or press Sort it for me and let it solve the puzzle.</p></div>
+        <div class="vb-card"><span class="vb-num">3</span><h3>Print and share</h3><p>A seating chart for the easel, place cards for the tables, and a link your venue can open on the day.</p></div>
+      </div>
+    </section>
+
+    <section class="vb-pricing" id="vb-pricing">
+      <div class="vb-price"><span class="vb-label">Build</span><span class="vb-amount">Free</span><ul><li>Unlimited guests and tables</li><li>Sort it for me</li><li>Clash warnings</li></ul><a class="vb-btn vb-btn-ghost" href="{{ section.settings.cta_link }}">Start free</a></div>
+      <div class="vb-price vb-price-dark"><span class="vb-label">Print pack</span><span class="vb-amount">&pound;29 <span>one-off</span></span><ul><li>Seating chart, place cards, table numbers</li><li>Venue link</li><li>Edit and re-print until the day</li></ul><a class="vb-btn" href="/products/print-pack">Get the print pack</a></div>
+      <div class="vb-price"><span class="vb-label">Planning</span><span class="vb-amount">&pound;9 <span>a month</span></span><ul><li>Everything in Print pack</li><li>Invites and RSVPs (coming soon)</li><li>Cancel any time</li></ul><a class="vb-btn vb-btn-ghost" href="/products/planning-plan-monthly">Start planning</a></div>
+    </section>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Vow Buddy landing",
+  "settings": [
+    { "type": "text", "id": "pill", "label": "Small label", "default": "Seating plans, sorted" },
+    { "type": "text", "id": "heading", "label": "Headline", "default": "Seat 140 guests without a single family row." },
+    { "type": "textarea", "id": "lead", "label": "Intro", "default": "Drag your guests onto tables, tell Vow Buddy who can't sit together, and press one button. It does the fiddly bit. You get a seating chart the venue can use and place cards you can print." },
+    { "type": "text", "id": "cta_label", "label": "Button text", "default": "Start your plan, free" },
+    { "type": "url", "id": "cta_link", "label": "Button link" }
+  ],
+  "presets": [ { "name": "Vow Buddy landing" } ]
+}
+{% endschema %}
